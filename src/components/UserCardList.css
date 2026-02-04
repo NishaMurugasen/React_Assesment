@@ -1,0 +1,80 @@
+/* Container for the white card and the hover logic */
+.user-card-wrapper {
+  background: #ffffff00 !important; /* Forces the card to be white */
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* Exact shadow to make white cards pop against gray background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); 
+  padding: 10px;
+}
+
+.user-profile-card {
+  text-align: center;
+  background: transparent !important; 
+  border: none !important;
+}
+
+/* Gray hover overlay with the exact tint */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(186, 178, 178, 0.7); /* The grey-ish tint from your screenshot */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+.user-card-wrapper:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Floating Action Buttons */
+.action-btn {
+  width: 48px !important;
+  height: 48px !important;
+  font-size: 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Specific colors for the circular buttons in the overlay */
+.edit-btn-circle {
+  background-color: #7b89f4 !important; /* Light blue/purple circle */
+  color: white !important;
+}
+
+.delete-btn-circle {
+  background-color: #ff0000 !important; /* Bright red circle */
+  color: white !important;
+}
+
+/* Typography */
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #262626;
+}
+
+.user-email {
+  color: #8c8c8c;
+  margin-bottom: 16px;
+}
+
+.card-avatar {
+  border: 2px solid #ffffff; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
